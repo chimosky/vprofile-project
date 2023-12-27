@@ -14,4 +14,4 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-            branch: vp-rem
+            branch: weblate-sync
