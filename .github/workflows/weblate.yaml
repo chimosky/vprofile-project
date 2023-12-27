@@ -1,17 +1,16 @@
 name: Weblate - Create PR when weblate pushes changes
 on:
   push: 
-    branches:
-      - weblate-sync
+    branches: [weblate-sync]
 
 jobs:
   weblateSync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: vp-rem
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-            branch: weblate-test
+            branch: weblate-sync
+            base: vp-rem
