@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          ref: vp-rem
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-            branch: weblate-sync
-            base: vp-rem
+            branch: weblate
