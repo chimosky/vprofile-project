@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: weblate-sync
+          ref: vp-rem
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-            branch: vp-rem
+            branch: weblate-test
